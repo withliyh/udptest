@@ -9,7 +9,7 @@ import (
 
 func main() {
 	fmt.Println("vim-go")
-	client, err := kcp.DialWithOptions("127.0.0.1:2000", nil, 10, 3)
+	client, err := kcp.DialWithOptions("liy.today:2000", nil, 10, 3)
 	if err != nil {
 		fmt.Println(err.Error())
 		return
@@ -19,5 +19,5 @@ func main() {
 		fmt.Printf("%s", err.Error())
 	}
 	fmt.Printf("%d\n", n)
-	<-time.After(2 * time.Second)
+	<-time.After(10 * time.Second)
 }
